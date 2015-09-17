@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		667B2347178E5B93007A0E9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B2346178E5B93007A0E9D /* UIKit.framework */; };
+		667B2349178E5B93007A0E9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B2348178E5B93007A0E9D /* Foundation.framework */; };
+		667B234B178E5B93007A0E9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B234A178E5B93007A0E9D /* CoreGraphics.framework */; };
+		667B234D178E5B93007A0E9D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667B234C178E5B93007A0E9D /* CoreData.framework */; };
+		667B2353178E5B93007A0E9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 667B2351178E5B93007A0E9D /* InfoPlist.strings */; };
+		667B2355178E5B93007A0E9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 667B2354178E5B93007A0E9D /* main.m */; };
+		667B2359178E5B93007A0E9D /* MPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 667B2358178E5B93007A0E9D /* MPAppDelegate.m */; };
+		667B235B178E5B93007A0E9D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 667B235A178E5B93007A0E9D /* Default.png */; };
+		667B235D178E5B93007A0E9D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 667B235C178E5B93007A0E9D /* Default@2x.png */; };
+		667B235F178E5B93007A0E9D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 667B235E178E5B93007A0E9D /* Default-568h@2x.png */; };
+		667B2362178E5B93007A0E9D /* MiPassportDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 667B2360178E5B93007A0E9D /* MiPassportDemo.xcdatamodeld */; };
+		667B236B178E84E2007A0E9D /* MPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 667B2369178E84E2007A0E9D /* MPLoginViewController.m */; };
+		667B236C178E84E2007A0E9D /* MPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667B236A178E84E2007A0E9D /* MPLoginViewController.xib */; };
+		66F80DAD179F77D2005E8939 /* MiPassport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F80DAC179F77D2005E8939 /* MiPassport.framework */; };
+		66F80DBC179FA7DA005E8939 /* MiPassport.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 66F80DBB179FA7DA005E8939 /* MiPassport.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		667B2343178E5B93007A0E9D /* MiPassportDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiPassportDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		667B2346178E5B93007A0E9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		667B2348178E5B93007A0E9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		667B234A178E5B93007A0E9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		667B234C178E5B93007A0E9D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		667B2350178E5B93007A0E9D /* MiPassportDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiPassportDemo-Info.plist"; sourceTree = "<group>"; };
+		667B2352178E5B93007A0E9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		667B2354178E5B93007A0E9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		667B2356178E5B93007A0E9D /* MiPassportDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MiPassportDemo-Prefix.pch"; sourceTree = "<group>"; };
+		667B2357178E5B93007A0E9D /* MPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPAppDelegate.h; sourceTree = "<group>"; };
+		667B2358178E5B93007A0E9D /* MPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPAppDelegate.m; sourceTree = "<group>"; };
+		667B235A178E5B93007A0E9D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		667B235C178E5B93007A0E9D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		667B235E178E5B93007A0E9D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		667B2361178E5B93007A0E9D /* MiPassportDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiPassportDemo.xcdatamodel; sourceTree = "<group>"; };
+		667B2368178E84E2007A0E9D /* MPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPLoginViewController.h; sourceTree = "<group>"; };
+		667B2369178E84E2007A0E9D /* MPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPLoginViewController.m; sourceTree = "<group>"; };
+		667B236A178E84E2007A0E9D /* MPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPLoginViewController.xib; sourceTree = "<group>"; };
+		66F80DAC179F77D2005E8939 /* MiPassport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MiPassport.framework; path = MiPassportDemo/MiPassport.framework; sourceTree = "<group>"; };
+		66F80DBB179FA7DA005E8939 /* MiPassport.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MiPassport.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		667B2340178E5B93007A0E9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667B2347178E5B93007A0E9D /* UIKit.framework in Frameworks */,
+				667B2349178E5B93007A0E9D /* Foundation.framework in Frameworks */,
+				667B234B178E5B93007A0E9D /* CoreGraphics.framework in Frameworks */,
+				667B234D178E5B93007A0E9D /* CoreData.framework in Frameworks */,
+				66F80DAD179F77D2005E8939 /* MiPassport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		667B233A178E5B93007A0E9D = {
+			isa = PBXGroup;
+			children = (
+				667B234E178E5B93007A0E9D /* MiPassportDemo */,
+				667B2345178E5B93007A0E9D /* Frameworks */,
+				667B2344178E5B93007A0E9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		667B2344178E5B93007A0E9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				667B2343178E5B93007A0E9D /* MiPassportDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		667B2345178E5B93007A0E9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66F80DAC179F77D2005E8939 /* MiPassport.framework */,
+				667B2346178E5B93007A0E9D /* UIKit.framework */,
+				667B2348178E5B93007A0E9D /* Foundation.framework */,
+				667B234A178E5B93007A0E9D /* CoreGraphics.framework */,
+				667B234C178E5B93007A0E9D /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		667B234E178E5B93007A0E9D /* MiPassportDemo */ = {
+			isa = PBXGroup;
+			children = (
+				667B2368178E84E2007A0E9D /* MPLoginViewController.h */,
+				667B2369178E84E2007A0E9D /* MPLoginViewController.m */,
+				667B236A178E84E2007A0E9D /* MPLoginViewController.xib */,
+				667B2357178E5B93007A0E9D /* MPAppDelegate.h */,
+				667B2358178E5B93007A0E9D /* MPAppDelegate.m */,
+				66F80DBB179FA7DA005E8939 /* MiPassport.bundle */,
+				667B2360178E5B93007A0E9D /* MiPassportDemo.xcdatamodeld */,
+				667B234F178E5B93007A0E9D /* Supporting Files */,
+			);
+			path = MiPassportDemo;
+			sourceTree = "<group>";
+		};
+		667B234F178E5B93007A0E9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				667B2350178E5B93007A0E9D /* MiPassportDemo-Info.plist */,
+				667B2351178E5B93007A0E9D /* InfoPlist.strings */,
+				667B2354178E5B93007A0E9D /* main.m */,
+				667B2356178E5B93007A0E9D /* MiPassportDemo-Prefix.pch */,
+				667B235A178E5B93007A0E9D /* Default.png */,
+				667B235C178E5B93007A0E9D /* Default@2x.png */,
+				667B235E178E5B93007A0E9D /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		667B2342178E5B93007A0E9D /* MiPassportDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 667B2365178E5B93007A0E9D /* Build configuration list for PBXNativeTarget "MiPassportDemo" */;
+			buildPhases = (
+				667B233F178E5B93007A0E9D /* Sources */,
+				667B2340178E5B93007A0E9D /* Frameworks */,
+				667B2341178E5B93007A0E9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiPassportDemo;
+			productName = MiPassportDemo;
+			productReference = 667B2343178E5B93007A0E9D /* MiPassportDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		667B233B178E5B93007A0E9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MP;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "李 业";
+			};
+			buildConfigurationList = 667B233E178E5B93007A0E9D /* Build configuration list for PBXProject "MiPassportDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 667B233A178E5B93007A0E9D;
+			productRefGroup = 667B2344178E5B93007A0E9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				667B2342178E5B93007A0E9D /* MiPassportDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		667B2341178E5B93007A0E9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667B2353178E5B93007A0E9D /* InfoPlist.strings in Resources */,
+				667B235B178E5B93007A0E9D /* Default.png in Resources */,
+				667B235D178E5B93007A0E9D /* Default@2x.png in Resources */,
+				667B235F178E5B93007A0E9D /* Default-568h@2x.png in Resources */,
+				667B236C178E84E2007A0E9D /* MPLoginViewController.xib in Resources */,
+				66F80DBC179FA7DA005E8939 /* MiPassport.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		667B233F178E5B93007A0E9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667B2355178E5B93007A0E9D /* main.m in Sources */,
+				667B2359178E5B93007A0E9D /* MPAppDelegate.m in Sources */,
+				667B2362178E5B93007A0E9D /* MiPassportDemo.xcdatamodeld in Sources */,
+				667B236B178E84E2007A0E9D /* MPLoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		667B2351178E5B93007A0E9D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				667B2352178E5B93007A0E9D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		667B2363178E5B93007A0E9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		667B2364178E5B93007A0E9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		667B2366178E5B93007A0E9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MiPassportDemo\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MiPassportDemo/MiPassportDemo-Prefix.pch";
+				INFOPLIST_FILE = "MiPassportDemo/MiPassportDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		667B2367178E5B93007A0E9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MiPassportDemo\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MiPassportDemo/MiPassportDemo-Prefix.pch";
+				INFOPLIST_FILE = "MiPassportDemo/MiPassportDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		667B233E178E5B93007A0E9D /* Build configuration list for PBXProject "MiPassportDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				667B2363178E5B93007A0E9D /* Debug */,
+				667B2364178E5B93007A0E9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		667B2365178E5B93007A0E9D /* Build configuration list for PBXNativeTarget "MiPassportDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				667B2366178E5B93007A0E9D /* Debug */,
+				667B2367178E5B93007A0E9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		667B2360178E5B93007A0E9D /* MiPassportDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				667B2361178E5B93007A0E9D /* MiPassportDemo.xcdatamodel */,
+			);
+			currentVersion = 667B2361178E5B93007A0E9D /* MiPassportDemo.xcdatamodel */;
+			path = MiPassportDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 667B233B178E5B93007A0E9D /* Project object */;
+}
