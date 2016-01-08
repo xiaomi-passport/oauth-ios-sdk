@@ -12,3 +12,5 @@
 #define kLogin  @"authorize"
 
 #define kMiPassportSDKErrorDomain   @"MiPassportSDKErrorDomain"
+
+#define kMiPassportAuthURL        @"mipassportsso://authorize"

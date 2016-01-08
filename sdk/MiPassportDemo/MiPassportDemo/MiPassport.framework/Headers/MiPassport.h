@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString* accessToken;
 @property (nonatomic, strong) NSString* tokenType;
 @property (nonatomic, assign) id<MPSessionDelegate> sessionDelegate;
+@property (nonatomic, strong) NSString *ssoCallbackScheme;
 @property (nonatomic, strong) NSDate* expirationDate;
 @property (nonatomic, strong) NSArray *permissions;
 @property (nonatomic, strong) NSString *encryptAlgorithm;
@@ -35,6 +36,8 @@
                        params:(NSMutableDictionary *)params
                    httpMethod:(NSString *)httpMethod
                      delegate:(id<MPRequestDelegate>)_delegate;
+
+- (BOOL)handleOpenURL:(NSURL *)url;
 
 @end
 

@@ -57,9 +57,11 @@
                 encryptAlgorithm:(NSString *)algorithm
                       encryptKey:(NSString *)key;
 
-
++ (NSString*)serializeURL:(NSString *)baseUrl
+                   params:(NSDictionary *)params
+               httpMethod:(NSString *)httpMethod;
 + (NSString *)getParamValueFromUrl:(NSString*)url paramName:(NSString *)paramName;
-+ (NSString *)hmac_sha1:(NSString *)key text:(NSString *)text;
+
 @end
 
 
