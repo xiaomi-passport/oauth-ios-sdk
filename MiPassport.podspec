@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.version                 = "1.0.0"
   s.platform                = :ios, "7.0"
   s.source_files            = 'sdk/SDK/MiPassport.framework/**/*.{h,m}'
-  s.ios.vendored_libraries  = 'sdk/SDK/*'
+  s.vendored_libraries      = 'sdk/SDK/*'
   s.resource                = 'sdk/SDK/MiPassport.bundle'
   s.source                  = { :git => "https://github.com/VianPan/MiPassport.git", :tag => "1.0.0" }
   s.frameworks              = 'UIKit', 'Foundation', 'CoreGraphics'
