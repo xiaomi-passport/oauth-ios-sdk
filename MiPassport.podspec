@@ -5,10 +5,10 @@ Pod::Spec.new do |s|
   s.name                = "MiPassport"
   s.version             = "1.0.0"
   s.platform            = :ios, "7.0"
-  s.resource            = 'sdk/SDK/MiPassport.bundle'
+  s.resource            = 'MiPassport/sdk/SDK/MiPassport.bundle'
   s.source              = { :git => "https://github.com/VianPan/MiPassport.git", :tag => "1.0.0" }
-  s.source_files        = 'sdk/SDK/*.{h,m}'
-  s.vendored_libraries  = 'sdk/SDK/MiPassport.framework'
+  s.source_files        = 'MiPassport/sdk/**/*.{h,m}'
+  s.vendored_libraries  = 'MiPassport/sdk/SDK/MiPassport.framework'
   s.frameworks          = 'UIKit', 'Foundation', 'CoreGraphics'
   s.license             = { :type => 'LGPL', :text => <<-LICENSE
                                                    ® 1998 - 2014 Tencent All Rights Reserved.
