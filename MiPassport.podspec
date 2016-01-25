@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.vendored_libraries  = 'sdk/SDK/MiPassport.framework'
   s.resource            = 'sdk/SDK/MiPassport.bundle'
   s.source              = { :git => "https://github.com/VianPan/MiPassport.git", :tag => "1.0.0" }
-  s.frameworks          = 'UIKit', 'Foundation', 'CoreGraphics'
+  s.ios.frameworks          = 'UIKit', 'Foundation', 'CoreGraphics'
   s.license             = { :type => 'LGPL', :text => <<-LICENSE
                                                    ® 1998 - 2014 Tencent All Rights Reserved.
                                                    LICENSE
