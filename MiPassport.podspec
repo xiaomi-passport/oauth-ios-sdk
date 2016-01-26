@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.homepage                = 'http://mi.com'
   s.summary                 = "小米账号授权SDK"
   s.name                    = "MiPassport"
-  s.version                 = "1.0.0"
+  s.version                 = "1.0.1"
   s.platform                = :ios, "7.0"
   s.vendored_frameworks     = 'sdk/SDK/MiPassport.framework'
   s.resource                = 'sdk/SDK/MiPassport.bundle'
