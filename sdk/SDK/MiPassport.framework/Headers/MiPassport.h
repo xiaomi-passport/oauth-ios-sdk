@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "MPAuthorizeDialog.h"
 
+typedef enum {
+    MPPreferLocaleOfSystem = 0,
+    MPPreferLocaleOfApp
+} MPPreferredLocaleSource;
+
 @protocol MPSessionDelegate;
 
 @interface MiPassport : NSObject
@@ -22,6 +27,7 @@
 @property (nonatomic, strong) NSArray *permissions;
 @property (nonatomic, strong) NSString *encryptAlgorithm;
 @property (nonatomic, strong) NSString *encryptKey;
+@property (nonatomic, assign) MPPreferredLocaleSource preferredLocaleSource;
 
 - (id)initWithAppId:(NSString *)appId
         redirectUrl:(NSString *)redirectUrl
@@ -38,7 +44,6 @@
                      delegate:(id<MPRequestDelegate>)_delegate;
 
 - (BOOL)handleOpenURL:(NSURL *)url;
-
 @end
 
 
