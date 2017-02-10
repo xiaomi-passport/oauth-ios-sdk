@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MiPassport/MiPassport.h>
 
 @interface MPAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -16,6 +17,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+@property (nonatomic, strong) MiPassport *passport;
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 

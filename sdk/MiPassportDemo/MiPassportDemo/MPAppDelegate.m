@@ -22,6 +22,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     MPLoginViewController *controller = [[MPLoginViewController alloc] init];
+    self.passport = [[MiPassport alloc] initWithAppId:@"179887661252608" redirectUrl:@"http://xiaomi.com" andDelegate:nil];
     [self.window setRootViewController:controller];
     return YES;
 }
@@ -66,6 +67,12 @@
             abort();
         } 
     }
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    NSLog(@"url: %@, source application: %@, annotation:%@", url, sourceApplication, annotation);
+    [self.passport handleOpenURL:url];
+    return YES;
 }
 
 #pragma mark - Core Data stack

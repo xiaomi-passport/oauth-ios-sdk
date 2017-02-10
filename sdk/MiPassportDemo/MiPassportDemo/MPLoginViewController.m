@@ -7,7 +7,7 @@
 //
 
 #import "MPLoginViewController.h"
-#import "MiPassport/MiPassport.h"
+#import "MPAppDelegate.h"
 
 @interface MPLoginViewController ()
 <MPSessionDelegate,
@@ -27,7 +27,7 @@ MPRequestDelegate>
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _passport = [[MiPassport alloc] initWithAppId:@"179887661252608" redirectUrl:@"http://xiaomi.com" andDelegate:self];
+        
     }
     return self;
 }
@@ -35,7 +35,12 @@ MPRequestDelegate>
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    MPAppDelegate *appDelegate = (MPAppDelegate *)[[UIApplication sharedApplication] delegate];
+    _passport = appDelegate.passport;
+    _passport.sessionDelegate = self;
+
+//  set preferred Locale Source if needed
+//  _passport.preferredLocaleSource = MPPreferLocaleOfApp;
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,7 +72,7 @@ MPRequestDelegate>
 #pragma mark - MPSessionDelegate
 // 登录成功
 - (void)passportDidLogin:(MiPassport *)passport{
-    NSLog(@"passport login succeeded, token:%@, token type:%@, expiration date:%@, encrypt algorithm:%@, encrypt key:%@", passport.accessToken, passport.tokenType, passport.expirationDate, passport.encryptAlgorithm, passport.encryptKey);
+    NSLog(@"passport login succeeded, token:%@, token type:%@, expiration date:%@", passport.accessToken, passport.tokenType, passport.expirationDate);
     NSString *alertMsg = [NSString stringWithFormat:@"Access Token: %@\nToken Type:%@\n", passport.accessToken, passport.tokenType];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Access Token" message: alertMsg delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
     [alert show];
@@ -76,7 +81,7 @@ MPRequestDelegate>
 //登录失败
 - (void)passport:(MiPassport *)passport failedWithError:(NSError *)error{
     NSDictionary *errorInfo = [error userInfo];
-    NSLog(@"passport login failed with error: %d info %@", [error code], [errorInfo objectForKey: @"error_description"]);
+    NSLog(@"passport login failed with error: %ld info %@", [error code], [errorInfo objectForKey: @"error_description"]);
     NSString *alertMsg = [NSString stringWithFormat:@"Error: %@\nDescription:%@\n", [errorInfo objectForKey:@"error"], [errorInfo objectForKey:@"error_description"]];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message: alertMsg delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
     [alert show];
@@ -130,7 +135,9 @@ MPRequestDelegate>
 
 // 请求失败， error包含错误信息
 - (void)request:(MPRequest *)request didFailWithError:(NSError *)error{
-    NSLog(@"request did fail with error code: %d", [error code]);
+    NSLog(@"request did fail with error code: %ld", [error code]);
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message: [error.userInfo JSONRepresentation] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+//    [alert show];
     if ([request.url hasSuffix:@"user/profile"]) {
         
     }
@@ -142,6 +149,8 @@ MPRequestDelegate>
 // 请求成功，result为处理后的请求结果
 - (void)request:(MPRequest *)request didLoad:(id)result{
     NSLog(@"request did load: %@", result);
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Result" message: [result JSONRepresentation] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+//    [alert show];
     if ([request.url hasSuffix:@"user/profile"]) {
         
     }

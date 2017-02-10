@@ -5,7 +5,7 @@
 http://dev.xiaomi.com/docs/passport/oauth2/
 
 ## 小米帐号开放平台文档
-http://dev.xiaomi.com/docs/passport/user_guide/
+http://dev.xiaomi.com/docs/passport/user-guide/
 
 ## 概述
 &nbsp;&nbsp;&nbsp;&nbsp;本SDK为开发者封装了iOS上OAuth登录小米帐号的方法，并且提供了访问小米帐号Open API的必要工具。用户可以试用SDK中提供的方法进行登录，并且获取小米帐号提供的资料。
@@ -151,3 +151,11 @@ httpMethod:@”GET” delegate:self];
 
 ### 8. 登出小米帐号
 &nbsp;&nbsp;&nbsp;&nbsp;调用MiPassport的logout方法即可实现登出
+
+## 快捷登录
+本SDK新增快捷登录功能，可以跳转到小米系列的App进行用户授权操作，省去了用户直接在webview中输入用户名和密码的步骤，提升了用户体验。
+
+- 配置App的url scheme，例如Demo中的mipassport179887661252608，其中mipassport字符串后面的部分为App Id。
+- 在用户授权完成，应用重新被唤起的时候，调用SDK的handleOpenURL方法完成登录。
+
+具体的实现请参照Demo代码。目前米家App已经支持快捷登录功能，开发者可以去App Store下载最新版米家App来协助测试。

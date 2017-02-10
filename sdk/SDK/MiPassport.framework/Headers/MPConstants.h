@@ -13,4 +13,4 @@
 
 #define kMiPassportSDKErrorDomain   @"MiPassportSDKErrorDomain"
 
-#define kMiPassportAuthURL        @"mipassportsso://authorize"
+#define kMiPassportAuthURL        @"mihomeoauth://authorize"
