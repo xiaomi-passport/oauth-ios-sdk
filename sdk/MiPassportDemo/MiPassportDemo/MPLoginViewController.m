@@ -11,7 +11,7 @@
 
 @interface MPLoginViewController ()
 <MPSessionDelegate,
-MPRequestDelegate>
+MiPassportRequestDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
 @end
@@ -113,7 +113,7 @@ MPRequestDelegate>
 
 #pragma mark - MPRequestDelegate
 // 请求向服务器发送
-- (void)requestLoading:(MPRequest *)request{
+- (void)requestLoading:(MiPassportRequest *)request{
     NSLog(@"request start loading");
     indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:
                      UIActivityIndicatorViewStyleGray];
@@ -127,14 +127,14 @@ MPRequestDelegate>
 }
 
 // 请求收到服务器回复，开始接受数据
-- (void)request:(MPRequest *)request didReceiveResponse:(NSURLResponse *)response{
+- (void)request:(MiPassportRequest *)request didReceiveResponse:(NSURLResponse *)response{
     NSLog(@"request did receive response");
     [indicatorView stopAnimating];
     indicatorView = nil;
 }
 
 // 请求失败， error包含错误信息
-- (void)request:(MPRequest *)request didFailWithError:(NSError *)error{
+- (void)request:(MiPassportRequest *)request didFailWithError:(NSError *)error{
     NSLog(@"request did fail with error code: %ld", [error code]);
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message: [error.userInfo JSONRepresentation] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
 //    [alert show];
@@ -147,7 +147,7 @@ MPRequestDelegate>
 }
 
 // 请求成功，result为处理后的请求结果
-- (void)request:(MPRequest *)request didLoad:(id)result{
+- (void)request:(MiPassportRequest *)request didLoad:(id)result{
     NSLog(@"request did load: %@", result);
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Result" message: [result JSONRepresentation] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
 //    [alert show];
@@ -160,7 +160,7 @@ MPRequestDelegate>
 }
 
 // 请求成功，data为未经处理的服务器返回数据
-- (void)request:(MPRequest *)request didLoadRawResponse:(NSData *)data{
+- (void)request:(MiPassportRequest *)request didLoadRawResponse:(NSData *)data{
     NSLog(@"request did load raw response: %@", data);
 }
 @end

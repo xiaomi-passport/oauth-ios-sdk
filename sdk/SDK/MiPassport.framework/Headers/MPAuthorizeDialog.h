@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MPRequest.h"
+#import "MiPassportRequest.h"
 
 @protocol MPAuthorizeDialogDelegate;
 

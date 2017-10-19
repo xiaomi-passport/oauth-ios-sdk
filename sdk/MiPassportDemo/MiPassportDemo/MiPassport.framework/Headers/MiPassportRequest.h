@@ -1,5 +1,5 @@
 //
-//  MPRequest.h
+//  MiPassportRequest.h
 //  MiPassportDemo
 //
 //  Created by 李 业 on 13-7-12.
@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol MPRequestDelegate;
+@protocol MiPassportRequestDelegate;
 
-@interface MPRequest : NSObject{
+@interface MiPassportRequest : NSObject{
     NSURLConnection *_connection;
     NSMutableData *_responseData;
 }
 
-@property(nonatomic,assign) id<MPRequestDelegate> delegate;
+@property(nonatomic,assign) id<MiPassportRequestDelegate> delegate;
 
 /**
  * The URL which will be contacted to execute the request.
@@ -43,16 +43,16 @@
 
 - (id)initWithWithParams:(NSMutableDictionary *) params
               httpMethod:(NSString *) httpMethod
-                delegate:(id<MPRequestDelegate>) delegate
+                delegate:(id<MiPassportRequestDelegate>) delegate
               requestURL:(NSString *) url
         encryptAlgorithm:(NSString *)algorithm
               encryptKey:(NSString *)key;
 
 - (void)connect;
 
-+ (MPRequest *)requestWithParams:(NSMutableDictionary *) params
++ (MiPassportRequest *)requestWithParams:(NSMutableDictionary *) params
                       httpMethod:(NSString *) httpMethod
-                        delegate:(id<MPRequestDelegate>) delegate
+                        delegate:(id<MiPassportRequestDelegate>) delegate
                       requestURL:(NSString *) url
                 encryptAlgorithm:(NSString *)algorithm
                       encryptKey:(NSString *)key;
@@ -70,24 +70,24 @@
 /*
  *Your application should implement this delegate
  */
-@protocol MPRequestDelegate <NSObject>
+@protocol MiPassportRequestDelegate <NSObject>
 
 @optional
 
 /**
  * Called just before the request is sent to the server.
  */
-- (void)requestLoading:(MPRequest *)request;
+- (void)requestLoading:(MiPassportRequest *)request;
 
 /**
  * Called when the server responds and begins to send back data.
  */
-- (void)request:(MPRequest *)request didReceiveResponse:(NSURLResponse *)response;
+- (void)request:(MiPassportRequest *)request didReceiveResponse:(NSURLResponse *)response;
 
 /**
  * Called when an error prevents the request from completing successfully.
  */
-- (void)request:(MPRequest *)request didFailWithError:(NSError *)error;
+- (void)request:(MiPassportRequest *)request didFailWithError:(NSError *)error;
 
 /**
  * Called when a request returns and its response has been parsed into
@@ -96,13 +96,13 @@
  * The resulting object may be a dictionary, an array, a string, or a number,
  * depending on thee format of the API response.
  */
-- (void)request:(MPRequest *)request didLoad:(id)result;
+- (void)request:(MiPassportRequest *)request didLoad:(id)result;
 
 /**
  * Called when a request returns a response.
  *
  * The result object is the raw response from the server of type NSData
  */
-- (void)request:(MPRequest *)request didLoadRawResponse:(NSData *)data;
+- (void)request:(MiPassportRequest *)request didLoadRawResponse:(NSData *)data;
 
 @end
