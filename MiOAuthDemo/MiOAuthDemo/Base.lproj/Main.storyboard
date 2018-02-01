@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RDf-Qc-lQR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Umc-1d-DVd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z4x-bF-1Ia">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rC3-4w-re6">
+                                <rect key="frame" x="128" y="30" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="w9U-j7-ijP"/>
+                                </constraints>
+                                <state key="normal" title="获取AccessToken"/>
+                                <connections>
+                                    <action selector="getAccessToken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6uK-b0-xU7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vd-5r-UOF">
+                                <rect key="frame" x="154" y="68" width="68" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="X9V-gB-fGw"/>
+                                </constraints>
+                                <state key="normal" title="获取Code"/>
+                                <connections>
+                                    <action selector="getCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G9L-y5-CNk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXw-qi-zEQ">
+                                <rect key="frame" x="142" y="106" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="C7C-h3-i0M"/>
+                                </constraints>
+                                <state key="normal" title="获取用户信息"/>
+                                <connections>
+                                    <action selector="getUserInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KIJ-cS-5Ka"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9vd-5r-UOF" firstAttribute="top" secondItem="rC3-4w-re6" secondAttribute="bottom" constant="8" id="8vc-yb-aKd"/>
+                            <constraint firstItem="YXw-qi-zEQ" firstAttribute="top" secondItem="9vd-5r-UOF" secondAttribute="bottom" constant="8" id="A8y-OB-dMs"/>
+                            <constraint firstItem="9vd-5r-UOF" firstAttribute="centerX" secondItem="Z4x-bF-1Ia" secondAttribute="centerX" id="Oqr-Ks-ZE2"/>
+                            <constraint firstItem="rC3-4w-re6" firstAttribute="centerX" secondItem="Z4x-bF-1Ia" secondAttribute="centerX" id="Vzz-Tc-ykf"/>
+                            <constraint firstItem="YXw-qi-zEQ" firstAttribute="centerX" secondItem="Z4x-bF-1Ia" secondAttribute="centerX" id="hOj-lh-qAN"/>
+                            <constraint firstItem="rC3-4w-re6" firstAttribute="top" secondItem="RDf-Qc-lQR" secondAttribute="bottom" constant="10" id="hbc-ze-v1h"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="95.802098950524751"/>
+        </scene>
+    </scenes>
+</document>
