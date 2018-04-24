@@ -19,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		5838E6631FB312CC00C0B5D2 /* MiAccountCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MiAccountCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5838E66E1FB3FD3B00C0B5D2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5838E66F1FB3FE9100C0B5D2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		58843D381F974D9A00145171 /* MiOAuthDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiOAuthDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58843D3B1F974D9A00145171 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,7 +77,6 @@
 				58843D461F974D9B00145171 /* LaunchScreen.storyboard */,
 				58843D491F974D9B00145171 /* Info.plist */,
 				58843D4A1F974D9B00145171 /* main.m */,
-				5838E66E1FB3FD3B00C0B5D2 /* PrefixHeader.pch */,
 			);
 			path = MiOAuthDemo;
 			sourceTree = "<group>";
@@ -306,7 +304,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MiOAuthDemo",
 				);
-				GCC_PREFIX_HEADER = /Users/ssc/Develop/MiAccount/MiOAuth/MiOAuthDemo/MiOAuthDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = MiOAuthDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -327,7 +325,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MiOAuthDemo",
 				);
-				GCC_PREFIX_HEADER = /Users/ssc/Develop/MiAccount/MiOAuth/MiOAuthDemo/MiOAuthDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = MiOAuthDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MiOAuth/MiOAuth.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
