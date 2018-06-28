@@ -14,7 +14,7 @@
 		58843D451F974D9A00145171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58843D441F974D9A00145171 /* Assets.xcassets */; };
 		58843D481F974D9B00145171 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58843D461F974D9B00145171 /* LaunchScreen.storyboard */; };
 		58843D4B1F974D9B00145171 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58843D4A1F974D9B00145171 /* main.m */; };
-		58DAB27A2020642700464DB3 /* MiOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DAB2792020642700464DB3 /* MiOAuth.framework */; };
+		EAA7D16C20E4EA900089AA36 /* MiOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA7D16B20E4EA900089AA36 /* MiOAuth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		58843D491F974D9B00145171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58843D4A1F974D9B00145171 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58843D5A1F974FBE00145171 /* MiOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MiOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58DAB2792020642700464DB3 /* MiOAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MiOAuth.framework; path = MiOAuthDemo/MiOAuth.framework; sourceTree = "<group>"; };
+		EAA7D16B20E4EA900089AA36 /* MiOAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MiOAuth.framework; path = MiOAuthDemo/MiOAuth.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58DAB27A2020642700464DB3 /* MiOAuth.framework in Frameworks */,
+				EAA7D16C20E4EA900089AA36 /* MiOAuth.framework in Frameworks */,
 				5838E6701FB3FE9200C0B5D2 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +50,7 @@
 		58843D2F1F974D9A00145171 = {
 			isa = PBXGroup;
 			children = (
-				58DAB2792020642700464DB3 /* MiOAuth.framework */,
+				EAA7D16B20E4EA900089AA36 /* MiOAuth.framework */,
 				58843D3A1F974D9A00145171 /* MiOAuthDemo */,
 				58843D391F974D9A00145171 /* Products */,
 				58843D581F974FBE00145171 /* Frameworks */,

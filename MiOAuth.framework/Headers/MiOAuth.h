@@ -46,6 +46,7 @@ typedef void (^MOCompleteBlock)(id responseObject, NSError *error);
                   macKey:(NSString *)macKey
            completeBlock:(MOCompleteBlock)block;
 
+- (void)clearCookie;
 - (BOOL)handleOpenUrl:(NSURL *)url;
 
 + (NSString *)generateHMACHeaderWithMethod:(NSString *)method
