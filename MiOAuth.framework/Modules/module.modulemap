@@ -1,0 +1,6 @@
+framework module MiOAuth {
+  umbrella header "MiOAuth.h"
+
+  export *
+  module * { export * }
+}
