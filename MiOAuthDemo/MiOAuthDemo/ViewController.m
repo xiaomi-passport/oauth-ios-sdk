@@ -2,74 +2,79 @@
 //  ViewController.m
 //  MiOAuthDemo
 //
-//  Created by ssc on 2017/10/18.
-//  Copyright © 2017年 xiaomi. All rights reserved.
+//  Created by key on 2018/7/5.
+//  Copyright © 2018年 key. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "AppDelegate.h"
+#import <MiOAuth/MiOAuth.h>
 
 @interface ViewController ()
 
 @property (nonatomic, strong) NSDictionary *loginInfo;
+@property (nonatomic, weak) IBOutlet UITextView *logView;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (IBAction)getAccessToken:(id)sender
-{
+- (IBAction)getAccessToken:(id)sender {
     [self applyAccessToken];
 }
 
-- (IBAction)getCode:(id)sender
-{
+- (IBAction)getCode:(id)sender {
     [self applyAuthCode];
 }
 
-- (void)applyAccessToken
-{
+- (void)applyAccessToken {
     [[MiOAuth sharedInstance] applyAccessTokenWithPermissions:nil
                                                         state:@"state"
                                                 completeBlock:^(id responseObject, NSError *error)
-    {
-        if(error){
-            NSLog(@"Apply AccessToken Error:%@", error);
-            return;
-        }
-        
-        NSLog(@"response object:%@", responseObject);
-        self.loginInfo = responseObject;
-    }];
-    
-
+     {
+         if(error){
+             NSLog(@"Apply AccessToken Error:%@", error);
+             return;
+         }
+         
+         NSLog(@"response object:%@", responseObject);
+         dispatch_async(dispatch_get_main_queue(), ^{
+             NSString *token = [responseObject valueForKey:@"access_token"];
+             if(token) {
+                 self.logView.text = token;
+             }
+         });
+         self.loginInfo = responseObject;
+     }];
 }
 
-- (void)applyAuthCode
-{
+- (void)applyAuthCode {
     [[MiOAuth sharedInstance] applyAuthCodeWithPermissions:nil state:@"state" completeBlock:^(id responseObject, NSError *error)
-    {
-        if(error){
-            NSLog(@"Apply AuthCode Error:%@", error);
-            return;
-        }
-        
-        NSLog(@"response object:%@", responseObject);
-    }];
+     {
+         if(error){
+             NSLog(@"Apply AuthCode Error:%@", error);
+             return;
+         }
+         dispatch_async(dispatch_get_main_queue(), ^{
+             NSString *code = [responseObject valueForKey:@"code"];
+             if(code) {
+                 self.logView.text = code;
+             }
+         });
+         NSLog(@"response object:%@", responseObject);
+     }];
 }
 
-- (IBAction)getUserInfo:(id)sender
-{
+- (IBAction)getUserInfo:(id)sender {
     if(!self.loginInfo){
         NSLog(@"No Login Info");
+        self.logView.text = @"No Login info";
         return;
     }
-    
     NSDictionary *params = @{
                              @"clientId":@"179887661252608",
                              @"token":[self.loginInfo objectForKey:@"access_token"]
@@ -78,14 +83,23 @@
                                         params:params
                                         macKey:[self.loginInfo objectForKey:@"mac_key"]
                                  completeBlock:^(id responseObject, NSError *error)
-    {
-        if(error){
-            NSLog(@"error:%@", error);
-            return;
-        }
+     {
+         if(error){
+             NSLog(@"error:%@", error);
+             return;
+         }
          
-        NSLog(@"result:%@", responseObject);
-    }];
+         NSLog(@"result:%@", responseObject);
+         dispatch_async(dispatch_get_main_queue(), ^{
+            self.logView.text = responseObject;
+         });
+     }];
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 
 @end

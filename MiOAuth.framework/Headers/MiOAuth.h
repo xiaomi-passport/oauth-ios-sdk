@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MiOAuth/MOErrorCode.h>
+#import "MOErrorCode.h"
 
 typedef NS_ENUM(NSInteger, MOPlatform)
 {
