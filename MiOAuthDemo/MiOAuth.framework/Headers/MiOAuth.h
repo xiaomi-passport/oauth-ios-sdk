@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "MOErrorCode.h"
 
-typedef NS_ENUM(NSInteger, MOPlatform)
-{
+typedef NS_ENUM(NSInteger, MOPlatform) {
     MOPlatformDev = 0,
     MOPlatformShuidi = 1
+};
+
+typedef NS_ENUM(NSInteger, MOLoginType) {
+    MOLoginTypeTicket = 0,
+    MOLoginTypePwd = 1
 };
 
 typedef void (^MOCompleteBlock)(id responseObject, NSError *error);
@@ -48,6 +52,7 @@ typedef void (^MOCompleteBlock)(id responseObject, NSError *error);
 
 - (void)clearCookie;
 - (BOOL)handleOpenUrl:(NSURL *)url;
+- (void)setLoginType:(MOLoginType)type;
 
 + (NSString *)generateHMACHeaderWithMethod:(NSString *)method
                                        url:(NSString *)url
