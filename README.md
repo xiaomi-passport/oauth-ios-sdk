@@ -7,7 +7,8 @@ Block定义如下:
 ```
 typedef void (^MOCompleteBlock)(id responseObject, NSError *error);  
 ```
-responseObject可以为不同的数据类型，每个接口可能会有所不同。  
+
+responseObject可以为不同的数据类型，每个接口可能会有所不同。  
 
 接入方应该先判断error是否为nil，如果error为nil，说明过程中没有产生错误，可以正常处理responseObject；如果error不为nil，那应该进行错误处理，此时responseObject一定为nil。
 
@@ -104,5 +105,5 @@ MiOAuth类提供以下方法可供调用：
 * SDK只支持iOS 8.0+。
 * 请在项目中Other Linker Flags添加-ObjC。
 * 可以参照Demo Project进行开发。
-* [小米OAuth简介](http://dev.xiaomi.com/docs/passport/oauth2/)
-* [小米开放平台文档](http://dev.xiaomi.com/docs/passport/user-guide/)
+* [小米OAuth简介](https://dev.mi.com/console/doc/detail?pId=711)
+* [小米开放平台文档](https://dev.mi.com/console/doc/detail?pId=708)
