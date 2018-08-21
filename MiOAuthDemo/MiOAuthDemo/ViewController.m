@@ -32,6 +32,8 @@
 }
 
 - (void)applyAccessToken {
+    [MiOAuth sharedInstance].loginType = MOLoginTypeTicket;
+    [MiOAuth sharedInstance].skipConfirm = false;
     [[MiOAuth sharedInstance] applyAccessTokenWithPermissions:nil
                                                         state:@"state"
                                                 completeBlock:^(id responseObject, NSError *error)
@@ -72,7 +74,6 @@
 - (IBAction)getUserInfo:(id)sender {
     if(!self.loginInfo){
         NSLog(@"No Login Info");
-        self.logView.text = @"No Login info";
         return;
     }
     NSDictionary *params = @{
@@ -91,7 +92,7 @@
          
          NSLog(@"result:%@", responseObject);
          dispatch_async(dispatch_get_main_queue(), ^{
-            self.logView.text = responseObject;
+             self.logView.text = responseObject;
          });
      }];
 }

@@ -23,10 +23,12 @@ typedef void (^MOCompleteBlock)(id responseObject, NSError *error);
 
 @interface MiOAuth : NSObject
 
+@property (nonatomic) BOOL skipConfirm;      //默认值为true，授权有效期内的用户在已登录情况下，不显示授权页面，直接通过。如果需要用户每次手动授权，设置为false
+@property (nonatomic) MOLoginType loginType; //登录类型，指定登录页面采用短信登录还是密码登录，默认密码方式登录。
+
 + (instancetype)sharedInstance;
 
 - (void)setTestEnv:(BOOL)test;
-
 - (void)setupWithPlatform:(MOPlatform)platform
                     appId:(NSString *)appId
               redirectUrl:(NSString *)redirectUrl;
@@ -52,7 +54,6 @@ typedef void (^MOCompleteBlock)(id responseObject, NSError *error);
 
 - (void)clearCookie;
 - (BOOL)handleOpenUrl:(NSURL *)url;
-- (void)setLoginType:(MOLoginType)type;
 
 + (NSString *)generateHMACHeaderWithMethod:(NSString *)method
                                        url:(NSString *)url
