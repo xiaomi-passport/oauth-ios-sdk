@@ -39,6 +39,10 @@ typedef void (^MOCompleteBlock)(id responseObject, NSError *error);
 - (void)applyAccessTokenWithPermissions:(NSArray *)permissions
                                   state:(NSString *)state
                           completeBlock:(MOCompleteBlock)block;
+- (void)applyAccessTokenWithPermissions:(NSArray *)permissions
+                                  state:(NSString *)state
+                               deviceId:(NSString *)deviceId
+                          completeBlock:(MOCompleteBlock)block;
 - (void)applyAuthCodeWithPermissions:(NSArray *)permissions
                                state:(NSString *)state
                        completeBlock:(MOCompleteBlock)block;
