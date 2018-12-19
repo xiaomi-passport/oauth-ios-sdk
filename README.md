@@ -105,14 +105,12 @@ MiOAuth类提供以下方法可供调用：
 ```
 
 * 用于记录登录出现问题。
-* 
 
 ```
 - (void)showAccountSDKLogView;
 ```
 
 * 配合setLogEnable用于展示问题，如遇问题请帖文件至issue。
-* 
 
 ## 其他说明
 
