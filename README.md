@@ -100,6 +100,20 @@ MiOAuth类提供以下方法可供调用：
 * 用于处理米家等App用户授权后跳转过来的逻辑。
 * SDK会判断参数用的url是否是SDK可以处理的合法的url，如果不是的话会返回NO。
 
+```
+- (BOOL)setLogEnable:(BOOL)logEnable;
+```
+
+* 用于记录登录出现问题。
+* 
+
+```
+- (void)showAccountSDKLogView;
+```
+
+* 配合setLogEnable用于展示问题，如遇问题请帖文件至issue。
+* 
+
 ## 其他说明
 
 * SDK只支持iOS 8.0+。

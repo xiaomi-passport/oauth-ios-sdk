@@ -28,6 +28,9 @@ typedef void (^MOCompleteBlock)(id responseObject, NSError *error);
 
 + (instancetype)sharedInstance;
 
+- (void)setLogEnable:(BOOL)logEnable;
+- (void)showAccountSDKLogView;
+
 - (void)setTestEnv:(BOOL)test;
 - (void)setupWithPlatform:(MOPlatform)platform
                     appId:(NSString *)appId
