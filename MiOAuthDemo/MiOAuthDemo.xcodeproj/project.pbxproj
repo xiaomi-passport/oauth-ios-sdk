@@ -11,7 +11,6 @@
 		EA18CE6B2110415F008B2162 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA18CE622110415E008B2162 /* ViewController.m */; };
 		EA18CE6C2110415F008B2162 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18CE632110415E008B2162 /* LaunchScreen.storyboard */; };
 		EA18CE6D2110415F008B2162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18CE642110415E008B2162 /* Main.storyboard */; };
-		EA18CE6E2110415F008B2162 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA18CE652110415E008B2162 /* Info.plist */; };
 		EA18CE6F2110415F008B2162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA18CE662110415E008B2162 /* Assets.xcassets */; };
 		EA18CE702110415F008B2162 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA18CE672110415E008B2162 /* AppDelegate.m */; };
 		EA18CE712110415F008B2162 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA18CE692110415F008B2162 /* main.m */; };
@@ -157,7 +156,6 @@
 				EA18CE6D2110415F008B2162 /* Main.storyboard in Resources */,
 				EA18CE6F2110415F008B2162 /* Assets.xcassets in Resources */,
 				EA4C986B21CA5259001EC5A5 /* MiOAuth.bundle in Resources */,
-				EA18CE6E2110415F008B2162 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
