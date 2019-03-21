@@ -14,7 +14,7 @@ responseObject可以为不同的数据类型，每个接口可能会有所不同
 
 ## 错误代码
 MiOAuth SDK的error domain为“com.xiaomi.mioauth”  
-  
+
 错误码  | 错误描述 |
 -------|------------------		|
 -10001 | 参数不能为空      		|
