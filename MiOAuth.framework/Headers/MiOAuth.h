@@ -25,7 +25,6 @@ typedef void (^MOCompleteBlock)(id responseObject, NSError *error);
 
 @property (nonatomic) BOOL skipConfirm;      //默认值为true，授权有效期内的用户在已登录情况下，不显示授权页面，直接通过。如果需要用户每次手动授权，设置为false
 @property (nonatomic) MOLoginType loginType; //登录类型，指定登录页面采用短信登录还是密码登录，默认密码方式登录。
-
 @property (nonatomic) BOOL externalAuthEnable; //是否支持跳转外部app（如 米家）授权，默认为支持
 
 + (instancetype)sharedInstance;
