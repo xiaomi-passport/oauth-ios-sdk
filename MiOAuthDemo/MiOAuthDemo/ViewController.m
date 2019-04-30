@@ -34,7 +34,7 @@
 - (void)applyAccessToken {
     [MiOAuth sharedInstance].loginType = MOLoginTypeTicket;
     [MiOAuth sharedInstance].skipConfirm = false;
-    [MiOAuth sharedInstance].externalAuthEnable = false;
+    [MiOAuth sharedInstance].externalAuthEnable = true;
     [[MiOAuth sharedInstance] applyAccessTokenWithPermissions:nil
                                                         state:@"state"
                                                 completeBlock:^(id responseObject, NSError *error)
