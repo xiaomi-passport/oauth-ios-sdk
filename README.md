@@ -115,7 +115,7 @@ MiOAuth类提供以下方法可供调用：
 ## 其他说明
 
 * SDK只支持iOS 8.0+。
-* 请在项目中Other Linker Flags添加-ObjC。
+* 请在项目中Other Linker Flags添加-ObjC,Build Phases添加libresolv.tbd.
 * 可以参照Demo Project进行开发。
 * [小米OAuth简介](https://dev.mi.com/console/doc/detail?pId=711)
 * [小米开放平台文档](https://dev.mi.com/console/doc/detail?pId=708)

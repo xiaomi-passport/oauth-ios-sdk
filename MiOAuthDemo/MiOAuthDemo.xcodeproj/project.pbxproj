@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5838E6701FB3FE9200C0B5D2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5838E66F1FB3FE9100C0B5D2 /* libz.tbd */; };
 		EA18CE6B2110415F008B2162 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA18CE622110415E008B2162 /* ViewController.m */; };
 		EA18CE6C2110415F008B2162 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18CE632110415E008B2162 /* LaunchScreen.storyboard */; };
 		EA18CE6D2110415F008B2162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18CE642110415E008B2162 /* Main.storyboard */; };
@@ -15,12 +14,12 @@
 		EA18CE702110415F008B2162 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA18CE672110415E008B2162 /* AppDelegate.m */; };
 		EA18CE712110415F008B2162 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA18CE692110415F008B2162 /* main.m */; };
 		EA4C986B21CA5259001EC5A5 /* MiOAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA4C986A21CA5259001EC5A5 /* MiOAuth.bundle */; };
+		EA6E33DF2367D1EB00C769EC /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6E33DE2367D1EB00C769EC /* libresolv.tbd */; };
 		EAEAABF2212BF22C00E44283 /* MiOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEAABF1212BF22C00E44283 /* MiOAuth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5838E6631FB312CC00C0B5D2 /* MiAccountCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MiAccountCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5838E66F1FB3FE9100C0B5D2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		58843D381F974D9A00145171 /* MiOAuthDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiOAuthDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58843D5A1F974FBE00145171 /* MiOAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MiOAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA18CE622110415E008B2162 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -33,6 +32,7 @@
 		EA18CE692110415F008B2162 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA18CE6A2110415F008B2162 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA4C986A21CA5259001EC5A5 /* MiOAuth.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MiOAuth.bundle; sourceTree = "<group>"; };
+		EA6E33DE2367D1EB00C769EC /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		EAEAABF1212BF22C00E44283 /* MiOAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MiOAuth.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,8 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6E33DF2367D1EB00C769EC /* libresolv.tbd in Frameworks */,
 				EAEAABF2212BF22C00E44283 /* MiOAuth.framework in Frameworks */,
-				5838E6701FB3FE9200C0B5D2 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +87,7 @@
 		58843D581F974FBE00145171 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5838E66F1FB3FE9100C0B5D2 /* libz.tbd */,
+				EA6E33DE2367D1EB00C769EC /* libresolv.tbd */,
 				5838E6631FB312CC00C0B5D2 /* MiAccountCore.framework */,
 				58843D5A1F974FBE00145171 /* MiOAuth.framework */,
 			);
