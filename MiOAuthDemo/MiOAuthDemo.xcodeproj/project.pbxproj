@@ -14,7 +14,6 @@
 		EA18CE702110415F008B2162 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA18CE672110415E008B2162 /* AppDelegate.m */; };
 		EA18CE712110415F008B2162 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA18CE692110415F008B2162 /* main.m */; };
 		EA4C986B21CA5259001EC5A5 /* MiOAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA4C986A21CA5259001EC5A5 /* MiOAuth.bundle */; };
-		EA6E33DF2367D1EB00C769EC /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6E33DE2367D1EB00C769EC /* libresolv.tbd */; };
 		EAEAABF2212BF22C00E44283 /* MiOAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEAABF1212BF22C00E44283 /* MiOAuth.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA6E33DF2367D1EB00C769EC /* libresolv.tbd in Frameworks */,
 				EAEAABF2212BF22C00E44283 /* MiOAuth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +292,10 @@
 				INFOPLIST_FILE = MiOAuthDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"resolv\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaomi.MiOAuthDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,7 +317,10 @@
 				INFOPLIST_FILE = MiOAuthDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"resolv\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaomi.MiOAuthDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
