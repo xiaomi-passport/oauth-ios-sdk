@@ -1,7 +1,7 @@
 # 小米帐号iOS OAuth SDK接入文档
 
 ## 交互方式
-SDK通过block方式回调接入方。
+SDK通过block方式回调接入方.
 
 Block定义如下:  
 ```
