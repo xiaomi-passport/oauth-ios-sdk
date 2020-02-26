@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "MOErrorCode.h"
 
+//! Project version number for MiOAuth.
+FOUNDATION_EXPORT double MiOAuthVersionNumber;
+
+//! Project version string for MiOAuth.
+FOUNDATION_EXPORT const unsigned char MiOAuthVersionString[];
+
+
 typedef NS_ENUM(NSInteger, MOPlatform) {
     MOPlatformDev = 0,
     MOPlatformShuidi = 1
