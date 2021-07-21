@@ -39,13 +39,7 @@ MiOAuth类提供以下方法可供调用：
 
 * 配置SDK，platform表示要使用的平台（开放平台/水滴平台）。
 
-```
-- (void)applyAccessTokenWithPermissions:(NSArray *)permissions
-                                  state:(NSString *)state
-                          completeBlock:(MOCompleteBlock)block;
-```
-
-* 该方法用于获取Access Token。
+* 该方法用于获取Authorization Code。
 * permissions参数是一个数组，可以为空。具体权限可以参照: [Scope](https://dev.mi.com/docs/passport/scopes/)
 
 ```

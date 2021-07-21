@@ -53,11 +53,11 @@ typedef void (^MOCompleteBlock)(id responseObject, NSError *error);
 
 - (void)applyAccessTokenWithPermissions:(NSArray *)permissions
                                   state:(NSString *)state
-                          completeBlock:(MOCompleteBlock)block;
+                          completeBlock:(MOCompleteBlock)block DEPRECATED_MSG_ATTRIBUTE("use applyAuthCodeWithPermissions:state:completeBlock:");
 - (void)applyAccessTokenWithPermissions:(NSArray *)permissions
                                   state:(NSString *)state
                                deviceId:(NSString *)deviceId
-                          completeBlock:(MOCompleteBlock)block;
+                          completeBlock:(MOCompleteBlock)block DEPRECATED_MSG_ATTRIBUTE("use applyAuthCodeWithPermissions:state:completeBlock:");
 - (void)applyAuthCodeWithPermissions:(NSArray *)permissions
                                state:(NSString *)state
                        completeBlock:(MOCompleteBlock)block;
