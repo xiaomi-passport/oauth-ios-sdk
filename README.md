@@ -39,9 +39,6 @@ MiOAuth类提供以下方法可供调用：
 
 * 配置SDK，platform表示要使用的平台（开放平台/水滴平台）。
 
-* 该方法用于获取Authorization Code。
-* permissions参数是一个数组，可以为空。具体权限可以参照: [Scope](https://dev.mi.com/docs/passport/scopes/)
-
 ```
 - (void)applyAuthCodeWithPermissions:(NSArray *)permissions
                                state:(NSString *)state
@@ -49,7 +46,7 @@ MiOAuth类提供以下方法可供调用：
 ```
 
 * 该方法用于获取Authorization Code。
-* permissions参数同上。
+* permissions参数是一个数组，可以为空。具体权限可以参照: [Scope](https://dev.mi.com/docs/passport/scopes/)
 
 ```
 - (void)applyAuthCodeWithPermissions:(NSArray *)permissions
@@ -58,7 +55,7 @@ MiOAuth类提供以下方法可供调用：
                        completeBlock:(MOCompleteBlock)block;
 ```
 
-* 该方法和上述两个方法类似，区别在于多了deviceId参数，用于水滴平台。
+* 该方法和上述方法类似，区别在于多了deviceId参数，用于水滴平台。
 
 ```
 - (void)doHttpGetWithUrl:(NSString *)url
