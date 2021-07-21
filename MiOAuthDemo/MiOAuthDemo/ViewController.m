@@ -23,40 +23,14 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (IBAction)getAccessToken:(id)sender {
-    [self applyAccessToken];
-}
-
 - (IBAction)getCode:(id)sender {
     [self applyAuthCode];
 }
 
-- (void)applyAccessToken {
+- (void)applyAuthCode {
     [MiOAuth sharedInstance].loginType = MOLoginTypeTicket;
     [MiOAuth sharedInstance].skipConfirm = false;
-    [MiOAuth sharedInstance].externalAuthEnable = false;
     [MiOAuth sharedInstance].fullScreenPresent = true;
-    [[MiOAuth sharedInstance] applyAccessTokenWithPermissions:nil
-                                                        state:@"state"
-                                                completeBlock:^(id responseObject, NSError *error)
-     {
-         if(error){
-             NSLog(@"Apply AccessToken Error:%@", error);
-             return;
-         }
-         
-         NSLog(@"response object:%@", responseObject);
-         dispatch_async(dispatch_get_main_queue(), ^{
-             NSString *token = [responseObject valueForKey:@"access_token"];
-             if(token) {
-                 self.logView.text = token;
-             }
-         });
-         self.loginInfo = responseObject;
-     }];
-}
-
-- (void)applyAuthCode {
     [[MiOAuth sharedInstance] applyAuthCodeWithPermissions:nil state:@"state" completeBlock:^(id responseObject, NSError *error)
      {
          if(error){
